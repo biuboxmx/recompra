@@ -1,0 +1,655 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="8 aprendizajes del D2C Summit para que tu marca venda más en línea, y un diagnóstico de tu tienda en 2 minutos. Por BIUBOX.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Del clic a la recompra · Guía D2C 2026 · BIUBOX">
+<meta property="og:description" content="8 aprendizajes del D2C Summit y un diagnóstico de tu tienda en 2 minutos.">
+<meta property="og:image" content="og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#000000">
+<link rel="icon" type="image/png" href="biubox-logo.png">
+<title>Del clic a la recompra</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=Inter+Tight:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: black type-led hero (SpaceX-like), then a cool-white reading column; one deliberate look (no theme switch), colors set explicitly. */
+:root{
+  --space:#06050C; --navy:#0E0B24; --ink:#0E0B24; --text:#36364F; --muted:#5E5F78;
+  --paper:#F6F6FB; --card:#FFFFFF; --line:#E2E2EF; --tint:#ECEBFF;
+  --blue:#3D6BFF; --violet:#8E86FF; --pink:#FF3D7F; --pale:#C9D2FF;
+  --display:'Archivo','Arial Black',system-ui,sans-serif;
+  --body:'Inter Tight',system-ui,-apple-system,'Segoe UI',sans-serif;
+  color-scheme: light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--space)}
+.wrap{max-width:880px;margin:0 auto;padding-left:max(16px, env(safe-area-inset-left,0px));padding-right:max(16px, env(safe-area-inset-right,0px))}
+
+/* top bar */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:rgba(0,0,0,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.08)}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:10px}
+.bar img{height:24px;width:auto;display:block}
+.dl{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 16px;border-radius:12px;border:0;cursor:pointer;
+  font:700 14px/1 var(--body);color:#fff;background:linear-gradient(135deg,var(--blue),#A45BFF);text-decoration:none}
+.dl:hover{filter:brightness(1.08)}
+.dl:focus-visible,.check input:focus-visible+span,.lnk:focus-visible{outline:3px solid var(--violet);outline-offset:3px}
+
+/* hero: SpaceX-like, pure black, type-led, no imagery */
+.hero{background:#000;color:#fff;position:relative;overflow:hidden;border-bottom:1px solid rgba(255,255,255,.1)}
+.hero svg.bg{position:absolute;left:0;right:0;bottom:0;width:100%;height:46%;pointer-events:none}
+.hero svg.stars{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.hero svg.stars circle{fill:#fff}
+.hero svg.stars .tw{animation:tw 3.6s ease-in-out infinite}
+@keyframes tw{0%,100%{opacity:.9}50%{opacity:.2}}
+@media (prefers-reduced-motion: reduce){.hero svg.stars .tw{animation:none}}
+.hero .wrap{position:relative;padding-block:64px 96px}
+.kicker{display:flex;flex-wrap:wrap;gap:6px 18px;font:600 11px/1.2 var(--body);letter-spacing:.32em;text-transform:uppercase;color:rgba(255,255,255,.62)}
+.kicker span+span::before{content:"/";margin-right:18px;color:rgba(255,255,255,.3)}
+.hero h1{font:800 clamp(40px,8.4vw,92px)/.95 var(--display);letter-spacing:.005em;text-transform:uppercase;margin:22px 0 22px;text-wrap:balance}
+.hero h1 em{font-style:normal;background:linear-gradient(90deg,#fff 0%,var(--pale) 35%,var(--violet) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lead{color:rgba(255,255,255,.72);font-size:17px;margin:0 0 30px;max-width:44ch;text-wrap:pretty}
+.go{display:inline-flex;align-items:center;gap:12px;min-height:46px;padding:0 22px;border:1px solid rgba(255,255,255,.85);color:#fff;text-decoration:none;font:700 12px/1 var(--body);letter-spacing:.24em;text-transform:uppercase;transition:background .2s,color .2s}
+.go:hover{background:#fff;color:#000}
+.go:focus-visible{outline:3px solid var(--violet);outline-offset:3px}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:56px;border-top:1px solid rgba(255,255,255,.14)}
+.stat{padding:18px 18px 0 0}
+.stat+.stat{padding-left:18px;border-left:1px solid rgba(255,255,255,.14)}
+.stat b{display:block;font:700 clamp(30px,4.4vw,44px)/1 var(--display);letter-spacing:-.01em;font-variant-numeric:tabular-nums}
+.stat span{display:block;font:600 11px/1.5 var(--body);letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.58);margin-top:10px}
+.src{font-size:11.5px;color:rgba(255,255,255,.42);margin-top:22px;letter-spacing:.02em}
+
+/* sections */
+section.block{padding-block:40px}
+section.block+section.block{border-top:1px solid var(--line)}
+h2{font:900 clamp(28px,5vw,40px)/1.04 var(--display);letter-spacing:-.02em;margin:0 0 12px;text-wrap:balance}
+h3{font:900 22px/1.12 var(--display);letter-spacing:-.01em;margin:0;text-wrap:balance}
+p{margin:0}
+.intro{color:var(--text);max-width:64ch;text-wrap:pretty}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;min-width:0}
+.num{font:900 32px/1 var(--display);color:var(--ink);font-variant-numeric:tabular-nums}
+.small{font-size:13.5px;line-height:1.45;color:var(--text);margin-top:4px}
+
+.why{background:var(--navy);color:#fff;border-radius:18px;padding:22px 22px 20px;margin-top:16px}
+.why h3{color:#fff;font-size:20px}
+.row{display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr) 46px;gap:12px;align-items:center;font-size:14px;margin-top:12px}
+.track{height:12px;border-radius:6px;background:rgba(255,255,255,.16)}
+.fill{height:12px;border-radius:6px;background:var(--violet)}
+.row b{text-align:right}
+
+.lesson{padding-block:22px;border-top:1px solid var(--line)}
+.lesson:first-of-type{border-top:0}
+.lhead{display:flex;gap:14px;align-items:center;margin-bottom:14px}
+.badge{flex:none;font:900 26px/1 var(--display);color:#fff;background:linear-gradient(135deg,var(--blue),#A45BFF);padding:8px 11px;border-radius:12px}
+.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.label{font:700 11.5px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.facts .card{padding:12px 14px}
+.facts .num{font-size:26px}
+ul.todo{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;color:#25253D;font-size:15px}
+.help{background:var(--tint);border-radius:12px;padding:14px 16px;margin-top:12px}
+.help .label{color:var(--ink);margin-bottom:6px}
+.help p{font-size:14.5px;color:#25253D}
+
+.eco .card h3{font-size:19px}
+.tag{font:700 11px/1 var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--blue)}
+.ecohead{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:4px 10px;margin-bottom:6px}
+.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:14px 0 10px}
+.flow span.step{background:rgba(255,255,255,.1);border-radius:999px;padding:8px 13px;font-weight:600;font-size:14px}
+.flow i{color:var(--violet);font-style:normal;font-weight:800}
+.big3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:18px}
+.big3 div{border-top:2px solid var(--ink);padding-top:10px}
+.big3 b{display:block;font:900 26px/1.1 var(--display)}
+.big3 span{font-size:13px;color:var(--text)}
+
+/* diagnostic */
+.checks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 18px;margin-top:14px}
+.check{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--line);cursor:pointer;font-size:15px;color:#25253D}
+.check input{position:absolute;opacity:0;width:1px;height:1px}
+.check span{flex:none;width:22px;height:22px;border:2px solid var(--ink);border-radius:6px;margin-top:1px;display:grid;place-items:center}
+.check input:checked+span{background:linear-gradient(135deg,var(--blue),#A45BFF);border-color:transparent}
+.check input:checked+span::after{content:"";width:6px;height:11px;border:solid #fff;border-width:0 2.5px 2.5px 0;transform:rotate(45deg) translate(-1px,-1px)}
+.score{margin-top:16px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.score b{font:900 34px/1 var(--display)}
+.score p{font-size:15px;color:#25253D;flex:1 1 240px;min-width:0}
+
+/* cta */
+.cta{background:var(--navy);color:#fff;border-radius:22px;padding:28px 26px;position:relative;overflow:hidden}
+.cta::before{content:"";position:absolute;right:-120px;top:-140px;width:420px;height:320px;background:radial-gradient(closest-side,rgba(122,75,255,.75),rgba(61,107,255,.25),transparent)}
+.cta>*{position:relative}
+.cta h2{color:#fff}
+.cta p{color:#DADCF0;max-width:52ch}
+.social{display:flex;flex-direction:column;gap:6px;margin-top:16px;font-weight:600;font-size:15px}
+.lnk{color:#C9D2FF}
+.foot{font-size:12.5px;color:var(--muted);padding-block:22px 34px}
+.msg{font-size:13px;color:#9FB2FF;min-height:18px;margin-top:8px}
+.leadform{margin-top:22px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:14px}
+.fgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.field{display:flex;flex-direction:column;gap:6px;min-width:0}
+.field label{font-size:13px;font-weight:600;color:var(--muted)}
+.field input,.field select{min-height:46px;border:1px solid var(--line);border-radius:12px;padding:0 12px;font:500 15px var(--body);color:var(--ink);background:#fff;width:100%}
+.field input:focus-visible,.field select:focus-visible,.chans input:focus-visible{outline:3px solid var(--violet);outline-offset:1px}
+.field input[aria-invalid="true"]{border-color:#D6336C}
+.chans{border:0;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.chans legend{font-size:13px;font-weight:600;color:var(--muted);margin-bottom:8px;padding:0}
+.chans label{display:flex;gap:8px;align-items:center;min-height:40px;padding:0 12px;border:1px solid var(--line);border-radius:999px;font-size:14px;cursor:pointer;background:#fff}
+.chans label:has(input:checked){border-color:var(--blue);background:var(--tint)}
+.err{color:#C2185B;font-size:14px;font-weight:600;min-height:0;margin:0}
+.err:empty{display:none}
+.leadform .dl{align-self:flex-start}
+.mmsg{color:var(--muted);margin:0}
+.plan{margin-top:18px;background:var(--navy);color:#fff;border-radius:18px;padding:22px}
+.plan h3{color:#fff}
+.plan .label{color:#9FB2FF;margin:16px 0 8px}
+.plan p,.plan li{color:#DADCF0;font-size:15px}
+.plan ol,.plan ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
+.plan strong{color:#fff}
+@media (max-width:720px){.fgrid{grid-template-columns:1fr}}
+
+@media (max-width:720px){
+  .hero .wrap{padding-block:44px 72px}
+  .grid4{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cols,.checks{grid-template-columns:1fr}
+  .row{grid-template-columns:minmax(0,1fr) 90px 40px}
+  .big3{grid-template-columns:1fr}
+  .stats{grid-template-columns:1fr}
+  .stat,.stat+.stat{padding:16px 0;border-left:0;border-bottom:1px solid rgba(255,255,255,.14)}
+}
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="wrap">
+    <img src="biubox-logo.png" alt="biubox">
+    <button type="button" class="dl" id="dlTop">Descargar PDF</button>
+  </div>
+</header>
+
+<div class="hero">
+  <svg class="stars" aria-hidden="true" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice"><g fill="#fff"><circle cx="518" cy="136" r="0.6" opacity="0.39" class="tw" style="animation-delay:2.1s"/><circle cx="585" cy="52" r="1.6" opacity="0.48"/><circle cx="138" cy="376" r="0.8" opacity="0.4"/><circle cx="679" cy="744" r="0.6" opacity="0.92"/><circle cx="1009" cy="525" r="0.6" opacity="0.7"/><circle cx="635" cy="879" r="0.6" opacity="0.68"/><circle cx="213" cy="377" r="1.6" opacity="0.42" class="tw" style="animation-delay:1.2s"/><circle cx="1306" cy="163" r="0.8" opacity="0.57"/><circle cx="876" cy="57" r="0.6" opacity="0.72"/><circle cx="794" cy="479" r="1" opacity="0.63"/><circle cx="1478" cy="325" r="0.8" opacity="0.83"/><circle cx="1118" cy="220" r="0.9" opacity="0.67"/><circle cx="1400" cy="657" r="0.9" opacity="0.72" class="tw" style="animation-delay:0.3s"/><circle cx="819" cy="148" r="1" opacity="0.44"/><circle cx="782" cy="35" r="0.6" opacity="0.81"/><circle cx="917" cy="788" r="1" opacity="0.55"/><circle cx="560" cy="447" r="1.3" opacity="0.39"/><circle cx="150" cy="243" r="0.6" opacity="0.39"/><circle cx="1122" cy="582" r="1.3" opacity="0.52" class="tw" style="animation-delay:1.5s"/><circle cx="1070" cy="20" r="1.3" opacity="0.56"/><circle cx="977" cy="444" r="0.8" opacity="0.81"/><circle cx="207" cy="223" r="1.1" opacity="0.9"/><circle cx="794" cy="150" r="1.1" opacity="0.68"/><circle cx="1413" cy="737" r="1.6" opacity="0.52"/><circle cx="664" cy="323" r="1.1" opacity="0.92" class="tw" style="animation-delay:0.6s"/><circle cx="282" cy="209" r="0.8" opacity="0.36"/><circle cx="1330" cy="164" r="0.9" opacity="0.35"/><circle cx="670" cy="332" r="1" opacity="0.92"/><circle cx="1105" cy="464" r="0.6" opacity="0.62"/><circle cx="1394" cy="857" r="1.6" opacity="0.59"/><circle cx="638" cy="93" r="1.1" opacity="0.39" class="tw" style="animation-delay:0.3s"/><circle cx="334" cy="146" r="1" opacity="0.71"/><circle cx="164" cy="510" r="1.6" opacity="0.41"/><circle cx="582" cy="23" r="0.8" opacity="0.72"/><circle cx="238" cy="227" r="1" opacity="0.71"/><circle cx="759" cy="104" r="1.3" opacity="0.95"/><circle cx="746" cy="435" r="0.6" opacity="0.44" class="tw" style="animation-delay:3.0s"/><circle cx="1185" cy="431" r="0.7" opacity="0.66"/><circle cx="328" cy="857" r="1" opacity="0.44"/><circle cx="869" cy="24" r="1.6" opacity="0.53"/><circle cx="1029" cy="82" r="0.9" opacity="0.66"/><circle cx="1453" cy="320" r="0.8" opacity="0.67"/><circle cx="1246" cy="297" r="0.8" opacity="0.72" class="tw" style="animation-delay:3.2s"/><circle cx="1213" cy="176" r="0.8" opacity="0.84"/><circle cx="1184" cy="204" r="1.6" opacity="0.65"/><circle cx="1170" cy="891" r="0.9" opacity="0.63"/><circle cx="310" cy="545" r="1" opacity="0.62"/><circle cx="1499" cy="889" r="1" opacity="0.4"/><circle cx="163" cy="423" r="1" opacity="0.47" class="tw" style="animation-delay:2.5s"/><circle cx="1440" cy="756" r="1.3" opacity="0.9"/><circle cx="550" cy="579" r="0.6" opacity="0.9"/><circle cx="1252" cy="675" r="1.3" opacity="0.88"/><circle cx="694" cy="572" r="0.6" opacity="0.83"/><circle cx="1555" cy="356" r="1.1" opacity="0.8"/><circle cx="136" cy="143" r="0.7" opacity="0.37" class="tw" style="animation-delay:2.4s"/><circle cx="745" cy="590" r="1.3" opacity="0.74"/><circle cx="561" cy="494" r="0.7" opacity="0.36"/><circle cx="1279" cy="654" r="0.6" opacity="0.67"/><circle cx="1494" cy="390" r="0.8" opacity="0.85"/><circle cx="338" cy="227" r="0.9" opacity="0.65"/><circle cx="1222" cy="293" r="1.6" opacity="0.6" class="tw" style="animation-delay:0.5s"/><circle cx="1456" cy="318" r="1.3" opacity="0.75"/><circle cx="1304" cy="465" r="1.6" opacity="0.43"/><circle cx="243" cy="459" r="1.3" opacity="0.82"/><circle cx="974" cy="698" r="0.7" opacity="0.45"/><circle cx="758" cy="653" r="1.6" opacity="0.39"/><circle cx="1092" cy="478" r="1.3" opacity="0.82" class="tw" style="animation-delay:0.4s"/><circle cx="896" cy="224" r="0.9" opacity="0.38"/><circle cx="156" cy="407" r="0.6" opacity="0.81"/><circle cx="1460" cy="399" r="1.6" opacity="0.71"/><circle cx="319" cy="249" r="1.6" opacity="0.67"/><circle cx="765" cy="847" r="1.6" opacity="0.88"/><circle cx="1507" cy="234" r="1.6" opacity="0.89" class="tw" style="animation-delay:0.8s"/><circle cx="716" cy="375" r="1.1" opacity="0.62"/><circle cx="116" cy="217" r="0.6" opacity="0.48"/><circle cx="484" cy="110" r="0.7" opacity="0.91"/><circle cx="1030" cy="330" r="0.9" opacity="0.88"/><circle cx="1548" cy="198" r="0.6" opacity="0.59"/><circle cx="780" cy="891" r="0.8" opacity="0.45" class="tw" style="animation-delay:1.7s"/><circle cx="825" cy="305" r="0.8" opacity="0.56"/><circle cx="148" cy="329" r="1" opacity="0.68"/><circle cx="705" cy="16" r="1" opacity="0.66"/><circle cx="473" cy="865" r="0.6" opacity="0.94"/><circle cx="1261" cy="875" r="0.6" opacity="0.4"/><circle cx="435" cy="815" r="0.7" opacity="0.51" class="tw" style="animation-delay:0.5s"/><circle cx="676" cy="820" r="0.9" opacity="0.59"/><circle cx="859" cy="463" r="1.3" opacity="0.77"/><circle cx="143" cy="52" r="0.7" opacity="0.61"/><circle cx="116" cy="845" r="0.6" opacity="0.83"/><circle cx="134" cy="771" r="0.6" opacity="0.51"/><circle cx="195" cy="10" r="1.6" opacity="0.6" class="tw" style="animation-delay:3.7s"/><circle cx="995" cy="39" r="0.8" opacity="0.91"/><circle cx="1551" cy="236" r="0.7" opacity="0.47"/><circle cx="499" cy="275" r="0.8" opacity="0.52"/><circle cx="800" cy="160" r="1" opacity="0.83"/><circle cx="1591" cy="33" r="0.6" opacity="0.79"/><circle cx="882" cy="171" r="1.3" opacity="0.5" class="tw" style="animation-delay:1.8s"/><circle cx="1053" cy="585" r="1.3" opacity="0.68"/><circle cx="1422" cy="873" r="0.9" opacity="0.76"/><circle cx="1572" cy="308" r="0.7" opacity="0.59"/><circle cx="556" cy="49" r="0.7" opacity="0.36"/><circle cx="1001" cy="792" r="1.1" opacity="0.45"/><circle cx="135" cy="757" r="1.6" opacity="0.75" class="tw" style="animation-delay:1.1s"/><circle cx="388" cy="264" r="1.3" opacity="0.46"/><circle cx="430" cy="3" r="1" opacity="0.93"/><circle cx="1556" cy="492" r="0.8" opacity="0.37"/><circle cx="1412" cy="196" r="0.7" opacity="0.35"/><circle cx="611" cy="427" r="1.6" opacity="0.74"/><circle cx="397" cy="699" r="0.6" opacity="0.51" class="tw" style="animation-delay:0.4s"/><circle cx="639" cy="38" r="0.6" opacity="0.53"/><circle cx="1007" cy="76" r="1.6" opacity="0.86"/><circle cx="248" cy="804" r="1.1" opacity="0.81"/><circle cx="1153" cy="445" r="0.9" opacity="0.78"/><circle cx="1029" cy="39" r="1.6" opacity="0.73"/><circle cx="1174" cy="731" r="0.7" opacity="0.9" class="tw" style="animation-delay:3.0s"/><circle cx="910" cy="732" r="0.6" opacity="0.85"/><circle cx="934" cy="804" r="0.8" opacity="0.4"/><circle cx="67" cy="573" r="0.6" opacity="0.58"/><circle cx="722" cy="46" r="0.6" opacity="0.73"/><circle cx="1089" cy="440" r="0.6" opacity="0.62"/><circle cx="112" cy="839" r="1.6" opacity="0.41" class="tw" style="animation-delay:2.1s"/><circle cx="1193" cy="426" r="0.6" opacity="0.86"/><circle cx="376" cy="681" r="0.8" opacity="0.79"/><circle cx="1561" cy="445" r="1.1" opacity="0.4"/><circle cx="1457" cy="259" r="0.6" opacity="0.72"/><circle cx="1028" cy="70" r="0.7" opacity="0.55"/><circle cx="1042" cy="624" r="0.7" opacity="0.36" class="tw" style="animation-delay:0.2s"/><circle cx="430" cy="605" r="0.8" opacity="0.76"/><circle cx="465" cy="465" r="1.3" opacity="0.63"/><circle cx="1227" cy="894" r="1.6" opacity="0.47"/><circle cx="1565" cy="843" r="1.6087522279083315" opacity="0.63"/><circle cx="1312" cy="871" r="1.8247254848255476" opacity="0.51"/><circle cx="336" cy="851" r="1.705354398766953" opacity="0.7" class="tw" style="animation-delay:0.6s"/><circle cx="839" cy="857" r="1.666302536440513" opacity="0.84"/><circle cx="814" cy="798" r="1.9516685193970373" opacity="0.49"/><circle cx="1436" cy="438" r="1.6124172015453326" opacity="0.35"/><circle cx="787" cy="406" r="1.7509755206375672" opacity="0.43"/><circle cx="550" cy="284" r="2.0201155168239935" opacity="0.35"/><circle cx="1201" cy="755" r="1.6600206737960914" opacity="0.91" class="tw" style="animation-delay:2.9s"/><circle cx="1443" cy="261" r="1.786110999677246" opacity="0.59"/></g></svg>
+  <svg class="bg" aria-hidden="true" viewBox="0 0 1000 300" preserveAspectRatio="none">
+    <defs>
+      <linearGradient id="hz" x1="0" x2="1"><stop offset="0" stop-color="#3D6BFF" stop-opacity="0"/><stop offset=".35" stop-color="#3D6BFF" stop-opacity=".9"/><stop offset=".7" stop-color="#8E86FF"/><stop offset="1" stop-color="#8E86FF" stop-opacity="0"/></linearGradient>
+      <linearGradient id="atm" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2F4BFF" stop-opacity="0"/><stop offset="1" stop-color="#2F4BFF" stop-opacity=".14"/></linearGradient>
+    </defs>
+    <path d="M-100 300 Q500 150 1100 300 Z" fill="#000"/><path d="M-100 300 Q500 150 1100 300 Z" fill="url(#atm)"/>
+    <path d="M-100 300 Q500 150 1100 300" fill="none" stroke="url(#hz)" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
+  </svg>
+  <div class="wrap">
+    <div class="kicker"><span>D2C Summit MX</span><span>Guía 2026</span><span>BIUBOX</span></div>
+    <h1>Del clic a la <em>recompra</em></h1>
+    <p class="lead">8 aprendizajes para que tu marca venda más en línea, y la operación que los convierte en ventas.</p>
+    <a class="go" href="#diagnostico">Haz tu diagnóstico <span aria-hidden="true">→</span></a>
+    <div class="stats">
+      <div class="stat"><b>49%</b><span>abandona la compra si el envío es caro</span></div>
+      <div class="stat"><b>68%</b><span>de las marcas ya vende por WhatsApp</span></div>
+      <div class="stat"><b>+80%</b><span>de las ventas son recompra en las marcas líderes</span></div>
+    </div>
+    <p class="src">Datos presentados por Tiendanube en el D2C Summit 2026 y del Estudio de Venta Online 2026 de la AMVO.</p>
+  </div>
+</div>
+
+<main class="wrap">
+
+<section class="block">
+  <div class="label">El contexto</div>
+  <h2>El comprador ya está en línea. Lo que falta es quitarle fricción.</h2>
+  <p class="intro">México es hoy uno de los mercados de comercio electrónico que más crece en el mundo. El reto de las marcas ya no es convencer al cliente de comprar en línea, sino ganarle la compra cuando compara precios, envío, formas de pago y tiempos de entrega en segundos.</p>
+  <div class="grid4" style="margin-top:18px">
+    <div class="card"><div class="num">77.2 M</div><p class="small">de mexicanos compraron en línea en 2025</p></div>
+    <div class="card"><div class="num">+19.2%</div><p class="small">creció el ecommerce retail en 2025</p></div>
+    <div class="card"><div class="num">17.7%</div><p class="small">de las ventas retail ya ocurren en línea</p></div>
+    <div class="card"><div class="num">8º</div><p class="small">lugar mundial por penetración del ecommerce</p></div>
+  </div>
+  <div class="why">
+    <h3>Por qué abandonan la compra</h3>
+    <p style="color:#C9D2FF;font-size:14px;margin-top:4px">No es falta de interés: es fricción.</p>
+    <div class="row"><span>Envío caro</span><div class="track"><div class="fill" style="width:98%"></div></div><b>49%</b></div>
+    <div class="row"><span>Desconfianza en el sitio</span><div class="track"><div class="fill" style="width:64%"></div></div><b>32%</b></div>
+    <div class="row"><span>No encontró el producto</span><div class="track"><div class="fill" style="width:62%"></div></div><b>31%</b></div>
+    <div class="row"><span>Falta su método de pago</span><div class="track"><div class="fill" style="width:56%"></div></div><b>28%</b></div>
+  </div>
+</section>
+
+<section class="block" id="aprendizajes">
+  <div class="label">8 aprendizajes</div>
+
+  <article class="lesson">
+    <div class="lhead"><span class="badge">01</span><h3>Corrige el checkout antes de invertir más en pauta</h3></div>
+    <div class="cols">
+      <div><div class="label">Lo que dicen los datos</div>
+        <div class="facts">
+          <div class="card"><div class="num">49%</div><p class="small">abandona si el envío es muy caro</p></div>
+          <div class="card"><div class="num">21%</div><p class="small">quiere saber el precio final antes de pagar</p></div>
+          <div class="card"><div class="num">22%</div><p class="small">abandona si pagar es tardado</p></div>
+          <div class="card"><div class="num">17%</div><p class="small">no quiere crearse un usuario</p></div>
+        </div></div>
+      <div><div class="label">Qué hacer</div>
+        <ul class="todo"><li>Muestra el costo de envío (o "gratis desde $X") desde la ficha, no al final.</li><li>Permite comprar como invitado y precarga los datos del cliente.</li><li>Quita pasos y campos que no necesitas para entregar.</li></ul>
+        <div class="help"><div class="label">Cómo te ayuda BIUBOX</div><p>Tarifas negociadas con múltiples paqueterías integradas, para que el envío deje de ser la razón número uno de abandono y tu cliente vea un costo claro.</p></div></div>
+    </div>
+  </article>
+
+  <article class="lesson">
+    <div class="lhead"><span class="badge">02</span><h3>El comprador mexicano paga de muchas formas</h3></div>
+    <div class="cols">
+      <div><div class="label">Lo que dicen los datos</div>
+        <div class="facts">
+          <div class="card"><div class="num">44%</div><p class="small">paga con tarjeta de crédito; más de la mitad usa otro método</p></div>
+          <div class="card"><div class="num">28%</div><p class="small">abandona si no está su método de pago</p></div>
+          <div class="card"><div class="num">17%</div><p class="small">no vuelve a comprar tras un rechazo</p></div>
+          <div class="card"><div class="num">$1,391</div><p class="small">ticket promedio presentado en el Summit</p></div>
+        </div></div>
+      <div><div class="label">Qué hacer</div>
+        <ul class="todo"><li>Suma transferencia, efectivo, meses sin intereses y pago a plazos.</li><li>Ten una pasarela de respaldo y ofrece otro método al instante si un pago se rechaza.</li><li>Arma bundles para acercarte al ticket promedio.</li></ul>
+        <div class="help"><div class="label">Cómo te ayuda BIUBOX</div><p>BIUBOX eSuite concentra pedidos y facturación de todos tus canales en un solo lugar, sin importar cómo pagó tu cliente.</p></div></div>
+    </div>
+  </article>
+
+  <article class="lesson">
+    <div class="lhead"><span class="badge">03</span><h3>La confianza y la búsqueda también venden</h3></div>
+    <div class="cols">
+      <div><div class="label">Lo que dicen los datos</div>
+        <div class="facts">
+          <div class="card"><div class="num">32%</div><p class="small">abandona por desconfianza</p></div>
+          <div class="card"><div class="num">31%</div><p class="small">abandona porque no encuentra el producto</p></div>
+        </div>
+        <div class="card" style="margin-top:8px"><div class="num">75%</div><p class="small">de los abandonos se explican por falta de información y consulta (AMVO)</p></div></div>
+      <div><div class="label">Qué hacer</div>
+        <ul class="todo"><li>Reseñas reales, contacto visible y política de devolución clara.</li><li>Fichas completas: fotos, medidas, qué incluye y preguntas frecuentes.</li><li>Buscador con filtros y sinónimos.</li></ul>
+        <div class="help"><div class="label">Cómo te ayuda BIUBOX</div><p>El catálogo de eSuite mantiene tus fichas completas y consistentes en cada canal. Y gestionamos tus devoluciones: recepción, revisión y reintegro a inventario.</p></div></div>
+    </div>
+  </article>
+
+  <article class="lesson">
+    <div class="lhead"><span class="badge">04</span><h3>WhatsApp con IA ya es el estándar</h3></div>
+    <div class="cols">
+      <div><div class="label">Lo que dicen los datos</div>
+        <div class="facts">
+          <div class="card"><div class="num">68%</div><p class="small">de las marcas vende por WhatsApp</p></div>
+          <div class="card"><div class="num">9 de 10</div><p class="small">consultas resueltas por IA en el caso presentado</p></div>
+        </div>
+        <div class="card" style="margin-top:8px"><div class="num">4 de 10</div><p class="small">compradores ya usan IA para comprar o comparar</p></div></div>
+      <div><div class="label">Qué hacer</div>
+        <ul class="todo"><li>Botón de WhatsApp en cada ficha, con un agente que responda al momento.</li><li>Conecta la IA a catálogo, stock y estatus real del pedido; pasa a una persona en quejas y reembolsos.</li><li>Catálogo con datos estructurados para que los asistentes de IA encuentren tus productos.</li></ul>
+        <div class="help"><div class="label">Cómo te ayuda BIUBOX</div><p>Un agente solo responde bien si tiene datos reales. eSuite reúne catálogo, inventario, pedidos, logística y atención al cliente en una sola fuente.</p></div></div>
+    </div>
+  </article>
+
+  <article class="lesson">
+    <div class="lhead"><span class="badge">05</span><h3>La recompra es la gran oportunidad</h3></div>
+    <div class="cols">
+      <div><div class="label">Lo que dicen los datos</div>
+        <div class="card" style="background:var(--navy);border-color:var(--navy);color:#fff"><div class="num" style="color:var(--violet);font-size:44px">+80%</div><p class="small" style="color:#DADCF0">de las ventas mensuales son recompra en las marcas líderes presentadas en el Summit (otra rebasa 75%).</p></div>
+        <p class="small" style="margin-top:10px">La base no es el descuento: es conocer a tu cliente y darle una buena experiencia en cada pedido.</p></div>
+      <div><div class="label">Qué hacer</div>
+        <ul class="todo"><li>Recuerda al cliente reponer su producto según su ciclo de consumo.</li><li>Ofrece reposición en un clic o suscripción con beneficio.</li><li>Pide la reseña después de la entrega y atiende el problema antes de que se convierta en queja.</li></ul>
+        <div class="help"><div class="label">Cómo te ayuda BIUBOX</div><p>La segunda compra empieza con una primera entrega completa y bien empacada. Y los dashboards de eSuite te muestran quién vuelve y qué recompra.</p></div></div>
+    </div>
+  </article>
+
+  <article class="lesson">
+    <div class="lhead"><span class="badge">06</span><h3>Vende donde ya está tu cliente</h3></div>
+    <div class="cols">
+      <div><div class="label">Dónde venden las marcas</div>
+        <div class="facts">
+          <div class="card"><div class="num">68%</div><p class="small">WhatsApp</p></div>
+          <div class="card"><div class="num">51%</div><p class="small">Marketplaces</p></div>
+          <div class="card"><div class="num">36%</div><p class="small">Instagram Shopping</p></div>
+          <div class="card"><div class="num">10%</div><p class="small">Solo tienda en línea</p></div>
+        </div></div>
+      <div><div class="label">Qué hacer</div>
+        <ul class="todo"><li>Tu tienda propia como base de datos, margen y relación.</li><li>Marketplaces para alcance; social y live commerce para crear demanda.</li><li>Un solo inventario detrás de todos los canales.</li></ul>
+        <div class="help"><div class="label">Cómo te ayuda BIUBOX</div><p>Operamos canales como TikTok Shop, Liverpool, Coppel, Farmacia del Ahorro, Totalplay y más, y fuimos el primer caso de éxito de Mercado Libre Negocios en México. eSuite importa tu catálogo de marketplaces a tu .com, y Foro B, nuestra casa productora, genera demanda con live y social commerce.</p></div></div>
+    </div>
+  </article>
+
+  <article class="lesson">
+    <div class="lhead"><span class="badge">07</span><h3>La transformación ocurre fuera de la pantalla</h3></div>
+    <div class="cols">
+      <div><div class="label">Lo que más duele en la entrega</div>
+        <div class="card">
+          <div class="row" style="margin-top:0;grid-template-columns:minmax(0,1fr) 46px"><span>Que llegue dañado</span><b>45%</b></div>
+          <div class="row" style="grid-template-columns:minmax(0,1fr) 46px"><span>Que no cumplan el tiempo</span><b>38%</b></div>
+          <div class="row" style="grid-template-columns:minmax(0,1fr) 46px"><span>Que llegue incompleto</span><b>33%</b></div>
+        </div>
+        <p class="small" style="margin-top:10px">Natura lo resumió así: lo que hace crecer al canal se decide en el almacén, no en el diseño.</p></div>
+      <div><div class="label">Qué hacer</div>
+        <ul class="todo"><li>Sincroniza el inventario de todos tus canales.</li><li>Manda tráfico a los SKUs con stock profundo.</li><li>Promete solo lo que tu operación cumple, y muéstralo.</li></ul>
+        <div class="help"><div class="label">Cómo te ayuda BIUBOX</div><p>Almacenamiento, pick &amp; pack con cajas controladas por volumen, envíos con cobertura nacional e inventario centralizado en eSuite.</p></div></div>
+    </div>
+  </article>
+
+  <article class="lesson">
+    <div class="lhead"><span class="badge">08</span><h3>El ecommerce es prioridad de toda la compañía</h3></div>
+    <div class="cols">
+      <div><p style="font:800 21px/1.3 var(--display);color:var(--ink);text-wrap:balance">"Deja de ser un canal más cuando deja de ser tarea de un equipo y se vuelve prioridad de toda la empresa."</p>
+        <p class="small" style="margin-top:8px">Idea central de la reflexión final de Natura en el Summit.</p></div>
+      <div><div class="label">Qué hacer</div>
+        <ul class="todo"><li>Un dueño del canal con autoridad sobre operación, catálogo y marketing.</li><li>Un tablero compartido: conversión, aprobación de pagos, entregas a tiempo y recompra.</li><li>Una revisión semanal enfocada en corregir una fricción.</li></ul>
+        <div class="help"><div class="label">Cómo te ayuda BIUBOX</div><p>Comercio, tecnología, contenido y operación conectados en una misma infraestructura: un solo equipo detrás de tu marca.</p></div></div>
+    </div>
+  </article>
+</section>
+
+<section class="block eco">
+  <div class="label">El ecosistema</div>
+  <h2>Un ecosistema nacido de la operación real</h2>
+  <p class="intro">Primero fuimos sellers. Cada pieza de BIUBOX resuelve una parte del mismo problema, y juntas cubren los 8 aprendizajes de esta guía.</p>
+  <div class="grid2" style="margin-top:18px">
+    <div class="card"><div class="ecohead"><h3>BIU SUPPLY</h3><span class="tag">Comercio</span></div><p class="small">Desde 2018 vendemos y escalamos marcas propias y de terceros en marketplaces y en tienda propia.</p></div>
+    <div class="card"><div class="ecohead"><h3>BIUBOX Fulfillment</h3><span class="tag">Operación</span></div><p class="small">Almacenamiento, pick &amp; pack, envíos con múltiples paqueterías y gestión de devoluciones, con cobertura nacional y operación multimarketplace.</p></div>
+    <div class="card"><div class="ecohead"><h3>BIUBOX eSuite</h3><span class="tag">Tecnología</span></div><p class="small">Catálogo con importación desde tus marketplaces a tu .com, pedidos, inteligencia de precios, logística, devoluciones, atención al cliente, facturación y dashboards en un solo lugar.</p></div>
+    <div class="card"><div class="ecohead"><h3>Foro B</h3><span class="tag">Demanda</span></div><p class="small">Nuestra casa productora: contenido, live commerce y social commerce en TikTok Shop e Instagram Live, más asesoría en gestión de tienda.</p></div>
+  </div>
+  <div class="why">
+    <div class="label" style="color:#9FB2FF">Cómo se conecta</div>
+    <div class="flow"><span class="step">Foro B crea demanda</span><i>→</i><span class="step">Vendes en cada canal</span><i>→</i><span class="step">BIUBOX entrega</span><i>→</i><span class="step">eSuite aprende</span></div>
+    <p style="font-size:14.5px;color:#DADCF0">Los datos de cada pedido regresan al sistema y mejoran el siguiente: qué comprar, a qué precio, por qué canal y a quién volver a venderle.</p>
+  </div>
+  <div class="big3">
+    <div><b>+500,000</b><span>órdenes operadas al año</span></div>
+    <div><b>Desde 2023</b><span>top sellers en marketplaces</span></div>
+    <div><b>1er caso de éxito</b><span>de Mercado Libre Negocios en México</span></div>
+  </div>
+</section>
+
+<section class="block" id="diagnostico">
+  <div class="label">Diagnóstico</div>
+  <h2>Diagnóstico rápido de tu tienda</h2>
+  <p class="intro">Marca lo que ya tienes. Cada casilla vacía es una venta que hoy se te escapa.</p>
+  <div class="checks" id="checks"></div>
+  <div class="score" aria-live="polite"><b id="sc">0/10</b><p id="scMsg">Empieza por envío y pagos: son las fricciones que más ventas cuestan.</p></div>
+  <form class="leadform" id="leadForm" novalidate>
+    <h3>Recibe tu diagnóstico y tu plan con BIUBOX</h3>
+    <p class="small">Lo analizamos al momento con tus respuestas y lo descargas en PDF junto con la guía completa.</p>
+    <div class="fgrid">
+      <div class="field"><label for="brand">Empresa o marca *</label><input id="brand" name="brand" type="text" maxlength="60" autocomplete="organization" required></div>
+      <div class="field"><label for="email">Correo profesional *</label><input id="email" name="email" type="email" maxlength="120" autocomplete="email" inputmode="email" placeholder="tu@empresa.com" required></div>
+      <div class="field"><label for="cat">¿Qué vendes?</label>
+        <select id="cat" name="cat"><option value="">Elige una categoría</option><option>Moda y accesorios</option><option>Belleza y cuidado personal</option><option>Salud y suplementos</option><option>Hogar y limpieza</option><option>Electrónica y tecnología</option><option>Juguetes, bebé y mascotas</option><option>Alimentos y bebidas</option><option>Otra</option></select></div>
+      <div class="field"><label for="orders">Pedidos al mes</label>
+        <select id="orders" name="orders"><option value="">Elige un rango</option><option value="1">Menos de 100</option><option value="2">100 a 500</option><option value="3">500 a 2,000</option><option value="4">Más de 2,000</option></select></div>
+    </div>
+    <fieldset class="chans"><legend>¿Dónde vendes hoy?</legend>
+      <label><input type="checkbox" value="own"> Tienda propia (.com)</label>
+      <label><input type="checkbox" value="meli"> Mercado Libre</label>
+      <label><input type="checkbox" value="amz"> Amazon</label>
+      <label><input type="checkbox" value="dept"> Liverpool, Coppel u otras tiendas</label>
+      <label><input type="checkbox" value="tt"> TikTok Shop</label>
+      <label><input type="checkbox" value="social"> Instagram o WhatsApp</label>
+    </fieldset>
+    <p class="err" id="formErr" role="alert"></p>
+    <button type="submit" class="dl" id="dlMine">Ver mi análisis y descargar PDF</button>
+    <p class="msg mmsg" id="msgMine"></p>
+  </form>
+  <div class="plan" id="plan" hidden aria-live="polite"></div>
+</section>
+
+<section class="block">
+  <div class="cta">
+    <img src="biubox-logo.png" alt="biubox" style="height:30px;width:auto;display:block;margin-bottom:14px">
+    <h2>Hagamos el diagnóstico de tu marca</h2>
+    <p>Revisamos tu tienda y tu operación, y te proponemos un plan a la medida con comercio, tecnología, contenido y fulfillment.</p>
+    <div class="social">
+      <a class="lnk" href="https://www.biubox.com.mx" target="_blank" rel="noopener">biubox.com.mx</a>
+      <span>TikTok: @mariangela.ceo · @biusupply</span>
+      <span>Instagram: @mariangela.ceo · @biuboxmx · @biusupply</span>
+    </div>
+    <div style="margin-top:18px"><button type="button" class="dl" id="dlBottom">Descargar la guía en PDF</button></div>
+    <p class="msg" id="msg"></p>
+  </div>
+  <p class="foot">Fuentes: Tiendanube, D2C Summit 2026; AMVO, Estudio de Venta Online 2026. BIUBOX · BIU SUPPLY · BIUBOX eSuite · Foro B.</p>
+</section>
+
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+<script>
+(() => {
+  const items = [
+    'El costo de envío se ve desde la ficha del producto.','Se puede comprar sin crear usuario.',
+    'Aceptas transferencia, efectivo y pagos a plazos.','Si un pago se rechaza, ofreces otro método al instante.',
+    'Tus productos tienen reseñas reales.','Respondes por WhatsApp al momento, con datos reales del pedido.',
+    'Tienes un plan de recompra para tus productos de consumo.','Vendes en más de un canal con un solo inventario.',
+    'Tu stock publicado es el stock real en almacén.','Todo tu equipo ve los mismos indicadores del canal.'];
+  const box = document.getElementById('checks');
+  items.forEach((t, i) => {
+    const l = document.createElement('label'); l.className = 'check'; l.htmlFor = 'c' + i;
+    const inp = document.createElement('input'); inp.type = 'checkbox'; inp.id = 'c' + i;
+    const s = document.createElement('span'); s.setAttribute('aria-hidden', 'true');
+    const tx = document.createElement('div'); tx.textContent = t;
+    l.append(inp, s, tx); box.appendChild(l);
+  });
+  const sc = document.getElementById('sc'), scMsg = document.getElementById('scMsg');
+  box.addEventListener('change', () => {
+    const n = box.querySelectorAll('input:checked').length;
+    sc.textContent = n + '/10';
+    scMsg.textContent = n >= 8 ? 'Vas bien: el siguiente paso es escalar canales.'
+      : n >= 5 ? 'Hay ventas fáciles de recuperar. Escríbenos y las revisamos contigo.'
+      : 'Empieza por envío y pagos: son las fricciones que más ventas cuestan.';
+  });
+
+  const msg = document.getElementById('msg');
+  const PDF = 'guia-del-clic-a-la-recompra.pdf';
+  const dlP = (window.claude && typeof window.claude.use === 'function')
+    ? window.claude.use('downloads').catch(() => null) : Promise.resolve(null);
+  // Save through the viewer when available; otherwise a normal browser download + visible open link.
+  async function saveFile(blobOrUrl, filename, out){
+    out.textContent = '';
+    const d = await dlP;
+    if (d) {
+      try {
+        const data = typeof blobOrUrl === 'string' ? await (await fetch(blobOrUrl)).blob() : blobOrUrl;
+        await d.save({ filename, data });
+        out.textContent = 'Listo, revisa tus descargas.'; return;
+      } catch (e) {
+        if (e && e.code === 'declined') { out.textContent = 'Descarga cancelada.'; return; }
+        if (e && e.code === 'rate_limited') { out.textContent = 'Espera un momento e intenta de nuevo.'; return; }
+      }
+    }
+    const url = typeof blobOrUrl === 'string' ? new URL(blobOrUrl, location.href).href : URL.createObjectURL(blobOrUrl);
+    try { const a = document.createElement('a'); a.href = url; a.download = filename; a.rel = 'noopener'; document.body.append(a); a.click(); a.remove(); } catch (e) {}
+    out.textContent = 'Si no se descargó, ';
+    const l = document.createElement('a'); l.href = url; l.target = '_blank'; l.rel = 'noopener'; l.className = 'lnk'; l.textContent = 'abre el PDF aquí'; l.style.fontWeight = '700';
+    out.append(l, document.createTextNode(' y guárdalo o compártelo desde tu navegador.'));
+  }
+  function download(){ return saveFile(PDF, 'BIUBOX - Del clic a la recompra.pdf', msg); }
+  document.getElementById('dlTop').addEventListener('click', download);
+  document.getElementById('dlBottom').addEventListener('click', download);
+
+  // ---- personalized results PDF ----
+  const REC = [
+    ['01','Muestra el costo de envío, o "gratis desde $X", desde la ficha del producto.','BIUBOX: tarifas negociadas con múltiples paqueterías integradas.'],
+    ['01','Activa la compra como invitado y precarga los datos del cliente.','BIUBOX: menos pasos entre el clic y el pedido listo para surtir.'],
+    ['02','Suma transferencia, efectivo, meses sin intereses y pago a plazos.','BIUBOX: eSuite concentra pedidos y facturación de todos tus canales.'],
+    ['02','Agrega una pasarela de respaldo y ofrece otro método al instante.','BIUBOX: eSuite registra cada pedido sin importar cómo pagó tu cliente.'],
+    ['03','Pide la reseña después de cada entrega y muéstrala en la ficha.','BIUBOX: fichas consistentes en eSuite y gestión de devoluciones.'],
+    ['04','Conecta un agente de WhatsApp con catálogo, stock y estatus real del pedido.','BIUBOX: eSuite reúne catálogo, inventario y pedidos en una sola fuente.'],
+    ['05','Programa recordatorios de reposición según el ciclo de consumo.','BIUBOX: entregas completas y dashboards de quién vuelve a comprar.'],
+    ['06','Abre marketplaces y social commerce con un solo inventario detrás.','BIUBOX: operamos marketplaces, importamos tu catálogo y Foro B genera demanda.'],
+    ['07','Sincroniza el inventario de todos tus canales con tu almacén.','BIUBOX: almacenamiento, pick & pack e inventario centralizado en eSuite.'],
+    ['08','Arma un tablero compartido: conversión, pagos, entregas a tiempo y recompra.','BIUBOX: comercio, tecnología, contenido y operación en un solo equipo.']
+  ];
+  const SHORT = ['Envío visible en la ficha','Compra sin usuario','Varios métodos de pago','Plan B si un pago se rechaza','Reseñas reales','WhatsApp con datos reales','Plan de recompra','Varios canales, un inventario','Stock real publicado','Indicadores compartidos'];
+  const clean = s => String(s).replace(/[^\x20-\x7E\xA0-\xFF]/g, '').trim();
+  const msgMine = document.getElementById('msgMine');
+
+  // ---- instant analysis (rules only; uses public BIUBOX information) ----
+  const FREE = ['gmail','hotmail','outlook','live','yahoo','icloud','me','aol','protonmail','proton','msn','prodigy','gmx','yandex','mail','zoho'];
+  const isWorkEmail = e => {
+    const m = /^[^\s@]+@([^\s@]+\.[^\s@]{2,})$/.exec(e); if (!m) return false;
+    return !FREE.includes(m[1].toLowerCase().split('.')[0]);
+  };
+  const PRIORITY = [0, 2, 8, 1, 3, 6, 5, 4, 7, 9];
+  function analyze(){
+    const checked = [...box.querySelectorAll('input')].map(i => i.checked);
+    const n = checked.filter(Boolean).length;
+    const brand = clean(document.getElementById('brand').value);
+    const cat = document.getElementById('cat').value;
+    const orders = +document.getElementById('orders').value || 0;
+    const ch = new Set([...document.querySelectorAll('.chans input:checked')].map(i => i.value));
+    const mkt = ch.has('meli') || ch.has('amz') || ch.has('dept') || ch.has('tt');
+    const open = PRIORITY.filter(i => !checked[i]);
+    const stage = orders === 1 ? 'Estás en etapa de arranque: ordenar envío y pagos ahora te evita problemas cuando crezcas.'
+      : orders === 2 ? 'Tu volumen ya justifica profesionalizar la operación: cada fricción que quitas se nota en tus ventas.'
+      : orders >= 3 ? 'Con tu volumen, cada punto de conversión y cada devolución evitada pesan en tu margen: centralizar operación y datos es clave.'
+      : 'Con tus respuestas ya vemos dónde se te están escapando ventas.';
+    const catNote = /Salud|Belleza|Hogar|Alimentos/.test(cat) ? 'En ' + cat.toLowerCase() + ' la recompra pesa mucho: un cliente bien atendido vuelve a pedir.'
+      : /Moda/.test(cat) ? 'En moda las devoluciones son las más frecuentes del ecommerce en México (AMVO): una buena gestión de cambios protege tu margen.'
+      : /Electrónica/.test(cat) ? 'En electrónica el cliente compara mucho: precio final claro, envío confiable y varias formas de pago deciden la venta.'
+      : /Juguetes/.test(cat) ? 'En tu categoría las temporadas pesan mucho: tener stock real y entregas a tiempo en picos marca la diferencia.'
+      : '';
+    const services = [];
+    if (!checked[0] || !checked[8] || orders >= 2) services.push(['BIUBOX Fulfillment', 'almacenamiento, pick & pack y envíos con múltiples paqueterías integradas, para que tu cliente vea un costo de envío claro y cada pedido llegue completo.']);
+    if (open.some(i => [2,3,4,5,8,9].includes(i)) || ch.size >= 2) services.push(['BIUBOX eSuite', 'catálogo, inventario, pedidos, devoluciones y dashboards de todos tus canales en un solo lugar' + (mkt && !ch.has('own') ? ', con importación de tu catálogo de marketplaces a tu propio .com.' : mkt ? ', e importación de catálogo entre tus marketplaces y tu .com.' : '.')]);
+    if (ch.size <= 1 || !checked[7]) services.push(['Operación multicanal', 'te ayudamos a vender en canales como TikTok Shop, Liverpool, Coppel, Mercado Libre y más, con un solo inventario detrás.']);
+    if ((!ch.has('tt') && !ch.has('social')) || !checked[6]) services.push(['Foro B', 'contenido, live commerce y social commerce para generar demanda y que tus clientes vuelvan a comprar.']);
+    if (!services.length) services.push(['BIUBOX', 'comercio, tecnología, contenido y operación conectados para escalar lo que ya haces bien.']);
+    const verdict = n >= 8 ? 'Vas bien: el siguiente paso es escalar canales.' : n >= 5 ? 'Hay ventas fáciles de recuperar.' : 'Empieza por envío y pagos: son las fricciones que más ventas cuestan.';
+    return { checked, n, brand, cat, orders, stage, catNote, verdict, top: open.slice(0, 3), services };
+  }
+  function renderPlan(a){
+    const plan = document.getElementById('plan'); plan.textContent = '';
+    const el = (tag, txt) => { const e = document.createElement(tag); if (txt != null) e.textContent = txt; return e; };
+    plan.append(el('div', 'Tu análisis')); plan.firstChild.className = 'label'; plan.firstChild.style.marginTop = '0';
+    plan.append(el('h3', a.brand + ' · ' + a.n + '/10'));
+    const p = el('p', a.stage + (a.catNote ? ' ' + a.catNote : '')); p.style.marginTop = '8px'; plan.append(p);
+    if (a.top.length){
+      const l = el('div', 'Tus 3 prioridades'); l.className = 'label'; plan.append(l);
+      const ol = el('ol'); a.top.forEach(i => { const li = el('li'); li.append(el('strong', SHORT[i] + ': '), document.createTextNode(REC[i][1])); ol.append(li); }); plan.append(ol);
+    }
+    const l2 = el('div', 'Cómo te ayuda BIUBOX'); l2.className = 'label'; plan.append(l2);
+    const ul = el('ul'); a.services.forEach(([nm, tx]) => { const li = el('li'); li.append(el('strong', nm + ': '), document.createTextNode(tx)); ul.append(li); }); plan.append(ul);
+    const l3 = el('div', 'Siguiente paso'); l3.className = 'label'; plan.append(l3);
+    plan.append(el('p', 'Agenda una sesión de 40 minutos con nuestro equipo: revisamos tu tienda y tu operación y te proponemos un plan a la medida. Escríbenos en biubox.com.mx o en nuestras redes.'));
+    plan.hidden = false;
+  }
+
+  async function buildPdf(a){
+    const { PDFDocument, StandardFonts, rgb } = window.PDFLib;
+    const base = await (await fetch(PDF)).arrayBuffer();
+    const doc = await PDFDocument.load(base);
+    const W = 612, H = 792;
+    const page = doc.insertPage(1, [W, H]);
+    const reg = await doc.embedFont(StandardFonts.Helvetica);
+    const bold = await doc.embedFont(StandardFonts.HelveticaBold);
+    let logo = null;
+    try { logo = await doc.embedPng(await (await fetch('biubox-logo.png')).arrayBuffer()); } catch (e) {}
+    const NAVY = rgb(14/255, 11/255, 36/255), VIOLET = rgb(142/255, 134/255, 255/255), BLUE = rgb(61/255, 107/255, 255/255);
+    const TEXT = rgb(54/255, 54/255, 79/255), MUTED = rgb(94/255, 95/255, 120/255), PAPER = rgb(246/255, 246/255, 251/255), WHITE = rgb(1, 1, 1), TINT = rgb(236/255, 235/255, 255/255), LINE = rgb(226/255, 226/255, 239/255);
+    const wrap = (text, font, size, maxW) => {
+      const out = []; let cur = '';
+      for (const w of text.split(' ')) { const t = cur ? cur + ' ' + w : w; if (font.widthOfTextAtSize(t, size) > maxW && cur) { out.push(cur); cur = w; } else cur = t; }
+      if (cur) out.push(cur); return out;
+    };
+    const { checked, n, brand, verdict } = a;
+
+    page.drawRectangle({ x: 0, y: 0, width: W, height: H, color: PAPER });
+    page.drawRectangle({ x: 0, y: H - 168, width: W, height: 168, color: rgb(0, 0, 0) });
+    page.drawRectangle({ x: 0, y: H - 169, width: W, height: 1, color: VIOLET });
+    if (logo) { const lh = 20, lw = logo.width * lh / logo.height; page.drawImage(logo, { x: 48, y: H - 58, width: lw, height: lh }); }
+    page.drawText('TU DIAGNÓSTICO', { x: 48, y: H - 86, size: 9, font: bold, color: VIOLET });
+    page.drawText(brand ? clean(brand) : 'Tu tienda en línea', { x: 48, y: H - 112, size: 22, font: bold, color: WHITE });
+    wrap(verdict, reg, 11, 330).forEach((l, i) => page.drawText(l, { x: 48, y: H - 134 - i * 14, size: 11, font: reg, color: rgb(.85, .86, .94) }));
+    page.drawText(n + '/10', { x: W - 48 - bold.widthOfTextAtSize(n + '/10', 54), y: H - 128, size: 54, font: bold, color: WHITE });
+    page.drawText('puntos que ya tienes', { x: W - 48 - reg.widthOfTextAtSize('puntos que ya tienes', 9), y: H - 146, size: 9, font: reg, color: rgb(.79, .82, 1) });
+
+    let y = H - 204;
+    const opps = checked.map((c, i) => c ? null : i).filter(i => i !== null);
+    page.drawText(opps.length ? 'Tus oportunidades' : 'No encontramos fricciones en tu lista', { x: 48, y, size: 15, font: bold, color: NAVY });
+    y -= 20;
+    for (const i of opps) {
+      const [les, todo, help] = REC[i];
+      page.drawRectangle({ x: 48, y: y - 2, width: 28, height: 14, color: BLUE });
+      page.drawText(les, { x: 48 + (28 - bold.widthOfTextAtSize(les, 8.5)) / 2, y: y + 2, size: 8.5, font: bold, color: WHITE });
+      page.drawText(SHORT[i], { x: 84, y, size: 10.5, font: bold, color: NAVY });
+      y -= 13;
+      for (const l of wrap(todo, reg, 9.2, 470)) { page.drawText(l, { x: 84, y, size: 9.2, font: reg, color: TEXT }); y -= 11.5; }
+      page.drawText(help, { x: 84, y, size: 8.6, font: reg, color: rgb(.36, .32, .85) }); y -= 17;
+    }
+    const have = checked.map((c, i) => c ? SHORT[i] : null).filter(Boolean);
+    if (have.length) {
+      y -= 4; page.drawLine({ start: { x: 48, y: y + 8 }, end: { x: W - 48, y: y + 8 }, thickness: 1, color: LINE });
+      page.drawText('Lo que ya haces bien', { x: 48, y: y - 6, size: 11, font: bold, color: NAVY }); y -= 20;
+      for (const l of wrap(have.join(' · '), reg, 9.2, W - 96)) { page.drawText(l, { x: 48, y, size: 9.2, font: reg, color: TEXT }); y -= 12; }
+    }
+    page.drawRectangle({ x: 48, y: 40, width: W - 96, height: 84, color: NAVY });
+    page.drawText('Hagamos juntos el plan para tu marca', { x: 66, y: 98, size: 14, font: bold, color: WHITE });
+    page.drawText('Las páginas siguientes explican cada aprendizaje. Escríbenos y revisamos tu tienda y tu operación.', { x: 66, y: 80, size: 8.8, font: reg, color: rgb(.85, .86, .94) });
+    page.drawText('biubox.com.mx  ·  TikTok @mariangela.ceo @biusupply  ·  Instagram @mariangela.ceo @biuboxmx @biusupply', { x: 66, y: 58, size: 8.2, font: bold, color: rgb(.79, .82, 1) });
+    page.drawText('Datos: Tiendanube, D2C Summit 2026; AMVO, Estudio de Venta Online 2026.', { x: 48, y: 22, size: 7.5, font: reg, color: MUTED });
+
+    // page 3: plan with BIUBOX
+    const p3 = doc.insertPage(2, [W, H]);
+    p3.drawRectangle({ x: 0, y: 0, width: W, height: H, color: PAPER });
+    p3.drawRectangle({ x: 0, y: H - 120, width: W, height: 120, color: rgb(0, 0, 0) });
+    p3.drawRectangle({ x: 0, y: H - 121, width: W, height: 1, color: VIOLET });
+    if (logo) { const lh = 18, lw = logo.width * lh / logo.height; p3.drawImage(logo, { x: 48, y: H - 52, width: lw, height: lh }); }
+    p3.drawText('TU PLAN CON BIUBOX', { x: 48, y: H - 78, size: 9, font: bold, color: VIOLET });
+    p3.drawText('Preparado para ' + brand, { x: 48, y: H - 102, size: 20, font: bold, color: WHITE });
+    let yy = H - 160;
+    const para = (txt, size, font, color, x, maxW, lh) => { for (const l of wrap(clean(txt), font, size, maxW)) { p3.drawText(l, { x, y: yy, size, font, color }); yy -= lh; } };
+    const head = t => { p3.drawText(t, { x: 48, y: yy, size: 14, font: bold, color: NAVY }); yy -= 20; };
+    head('Resumen');
+    para(a.stage + (a.catNote ? ' ' + a.catNote : ''), 10.5, reg, TEXT, 48, W - 96, 14.5);
+    para('Tu puntaje: ' + n + '/10. ' + verdict, 10.5, bold, NAVY, 48, W - 96, 14.5);
+    yy -= 12;
+    if (a.top.length) {
+      head('Tus 3 prioridades');
+      a.top.forEach((i, k) => {
+        p3.drawRectangle({ x: 48, y: yy - 3, width: 18, height: 16, color: BLUE });
+        p3.drawText(String(k + 1), { x: 54, y: yy + 1, size: 10, font: bold, color: WHITE });
+        p3.drawText(SHORT[i] + '  ·  aprendizaje ' + REC[i][0], { x: 76, y: yy, size: 11, font: bold, color: NAVY }); yy -= 14;
+        para(REC[i][1], 10, reg, TEXT, 76, W - 124, 13); yy -= 8;
+      });
+      yy -= 6;
+    }
+    head('Cómo te ayuda BIUBOX');
+    for (const [nm, tx] of a.services) {
+      const h = Math.max(1, wrap(clean(tx), reg, 10, W - 132).length) * 13 + 26;
+      p3.drawRectangle({ x: 48, y: yy - h + 14, width: W - 96, height: h, color: TINT });
+      p3.drawText(nm, { x: 62, y: yy, size: 11, font: bold, color: NAVY }); yy -= 15;
+      para(tx, 10, reg, TEXT, 62, W - 132, 13); yy -= 16;
+    }
+    p3.drawRectangle({ x: 48, y: 40, width: W - 96, height: 84, color: NAVY });
+    p3.drawText('Siguiente paso: una sesión de 40 minutos', { x: 66, y: 98, size: 14, font: bold, color: WHITE });
+    p3.drawText('Revisamos tu tienda y tu operación y te proponemos un plan a la medida.', { x: 66, y: 80, size: 9, font: reg, color: rgb(.85, .86, .94) });
+    p3.drawText('biubox.com.mx  ·  TikTok @mariangela.ceo @biusupply  ·  Instagram @mariangela.ceo @biuboxmx @biusupply', { x: 66, y: 58, size: 8.2, font: bold, color: rgb(.79, .82, 1) });
+    p3.drawText('Análisis generado automáticamente con tus respuestas. Datos de mercado: Tiendanube, D2C Summit 2026; AMVO 2026.', { x: 48, y: 22, size: 7.5, font: reg, color: MUTED });
+    return { bytes: await doc.save(), brand };
+  }
+
+  document.getElementById('leadForm').addEventListener('submit', async ev => {
+    ev.preventDefault();
+    const err = document.getElementById('formErr');
+    const bEl = document.getElementById('brand'), eEl = document.getElementById('email');
+    const bOk = clean(bEl.value).length >= 2, eOk = isWorkEmail(eEl.value.trim());
+    bEl.setAttribute('aria-invalid', bOk ? 'false' : 'true'); eEl.setAttribute('aria-invalid', eOk ? 'false' : 'true');
+    if (!bOk || !eOk) {
+      err.textContent = !bOk ? 'Escribe el nombre de tu empresa o marca.' : 'Usa tu correo de empresa (no Gmail, Hotmail, Outlook o similares).';
+      (!bOk ? bEl : eEl).focus(); return;
+    }
+    err.textContent = '';
+    const a = analyze(); renderPlan(a);
+    msgMine.textContent = 'Generando tu PDF…';
+    try {
+      if (!window.PDFLib) throw new Error('nolib');
+      const { bytes, brand } = await buildPdf(a);
+      const name = 'Diagnóstico BIUBOX' + (brand ? ' - ' + brand.replace(/[\\/:*?"<>|]/g, '') : '') + '.pdf';
+      await saveFile(new Blob([bytes], { type: 'application/pdf' }), name, msgMine);
+    } catch (e) {
+      msgMine.textContent = 'No pudimos generar tu PDF aquí. Tu análisis está abajo y puedes descargar la guía general arriba.';
+    }
+  });
+})();
+</script>
+</body>
+</html>
